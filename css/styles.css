@@ -27,6 +27,8 @@ h6 {
 
 a {
   text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
 
 footer {
@@ -144,6 +146,21 @@ footer {
   text-align: left;
 }
 
+.line {
+  position: relative;
+}
+
+.line:after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #404bbf;
+}
+
 .header-bar:hover {
   color: #404bbf;
 }
@@ -193,7 +210,14 @@ footer {
 
 .order-page {
   padding: 188px 0;
-  background-color: #2e2f42;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .order-title {
@@ -242,6 +266,10 @@ footer {
 
 .advantages-l {
   flex-basis: calc((100% - 72px) / 4);
+}
+
+.advantages-icons {
+  fill: #797fb9;
 }
 
 .advantages-title {
